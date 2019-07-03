@@ -1,7 +1,7 @@
 package com.stackroute;
 
 public class GuessNumber {
-    public String  compare(int num1, int num2)
+    public String  compare(int num1, int num2)//comparing guessed number with actual one
     {
         String variable;
         if (num1 > num2) {

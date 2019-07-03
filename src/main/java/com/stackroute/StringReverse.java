@@ -3,7 +3,7 @@ package com.stackroute;
 public class StringReverse {
     public  String ReverseMethod(String string) {
         if (string == null || string.isEmpty())
-            return string;
+            return "please enter string";
         else
         {
             String reverse = "";

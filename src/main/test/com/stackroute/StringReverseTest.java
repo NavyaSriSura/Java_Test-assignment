@@ -12,30 +12,40 @@ public class StringReverseTest {
     public void setUp()
     {
         stringReverse=new StringReverse();
-        System.out.println("Before");
     }
     @After
     public void tearDown()
     {
         stringReverse=null;
-        System.out.println("After ");
     }
     @Test
-    public void givenAStringShouldReturnReverseOfTheString()
+    public void givenAStringReturnReverseOfTheString()
     {
         String result=stringReverse.ReverseMethod("Navya");
-        assertEquals(result,"ayvaN");
+        assertEquals("ayvaN",result);
     }
     @Test
-    public void givenAStringShouldReturnReverseOfString()
+    public void givenAStringReturnReverseOfString()
     {
         String result=stringReverse.ReverseMethod("NavyaSri");
-        assertEquals(result,"irSayvaN");
+        assertEquals("irSayvaN",result);
     }
     @Test
-    public void givenAStringShouldReturnStringReverse()
+    public void givenAStringReturnStringReverse()
     {
         String result=stringReverse.ReverseMethod("stackroute");
-        assertEquals(result,"etuorkcats");
+        assertEquals("etuorkcats",result);
+    }
+    @Test
+    public void givenEmptyStringReturnError()
+    {
+        String result=stringReverse.ReverseMethod("");
+        assertEquals("please enter string",result);
+    }
+    @Test
+    public void givenNullReturnNull()
+    {
+        String result=stringReverse.ReverseMethod(null);
+        assertEquals("please enter string",result);
     }
 }

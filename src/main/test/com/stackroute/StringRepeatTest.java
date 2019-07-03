@@ -12,17 +12,15 @@ public class StringRepeatTest
     @Before
     public void setUp()
     {
-        System.out.println("Before");
         stringRepeat=new StringRepeat();
     }
     @After
     public void tearDown()
     {
-        System.out.println("After");
         stringRepeat=null;
     }
   @Test
-    public void givenAStringShouldRepeatLastNumberOfGivenCharacters()
+    public void givenAStringRepeatLastNumberOfGivenCharacters()
   {
 
       String result=stringRepeat.stringRepeatMethod("navya",3);
@@ -30,7 +28,7 @@ public class StringRepeatTest
   }
 
     @Test
-    public void givenAStringShouldRepeatLastNumberCharacters()
+    public void givenAStringRepeatLastNumberCharacters()
     {
 
         String result=stringRepeat.stringRepeatMethod("Stackroute",3);
@@ -41,5 +39,12 @@ public class StringRepeatTest
     {
         String result=stringRepeat.stringRepeatMethod("route",2);
         assertEquals("routetete",result);
+    }
+
+    @Test
+    public void givenAInValidStringReturnError()
+    {
+        String result=stringRepeat.stringRepeatMethod("route",6);
+        assertEquals("Enter Valid number",result);
     }
 }

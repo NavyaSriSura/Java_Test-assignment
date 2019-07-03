@@ -13,13 +13,11 @@ public class PalindromeTest
     public void setUp()
     {
          palindrome=new Palindrome();
-        System.out.println("Before");
     }
     @After
     public void tearDown()
     {
         palindrome=null;
-        System.out.println("After");
     }
     @Test
     public void givenANumberShouldCheckIfItIsAPalindrome()

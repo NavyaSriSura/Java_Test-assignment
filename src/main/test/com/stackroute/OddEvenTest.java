@@ -12,13 +12,11 @@ public class OddEvenTest {
     public void setUp()
     {
         oddEven=new OddEven();
-        System.out.println("Before");
     }
     @After
     public void tearDown()
     {
         oddEven=null;
-        System.out.println("After");
     }
 @Test
 public  void givenANumberBetween20and30ShouldReturntJerryIfEven()
@@ -37,8 +35,13 @@ public  void givenANumberBetween20and30ShouldReturntJerryIfEven()
     @Test
     public  void givenANumberNotBetween20and30ShouldReturnNotTomNotJerry()
     {
-
         String result=oddEven.checkOddEven(8);
         assertEquals(result,"NotTomNotJerry");
+    }
+    @Test
+    public void givenNegativeNumberReturnError()
+    {
+        String result=oddEven.checkOddEven(-1);
+        assertEquals(result,"Enter a Positive Number");
     }
 }

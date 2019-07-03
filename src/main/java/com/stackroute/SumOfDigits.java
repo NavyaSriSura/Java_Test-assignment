@@ -4,7 +4,7 @@ public class SumOfDigits
 {
     public int sumDigits(String number)
     {
-         String[] numberString=number.split(" ");
+         String[] numberString=number.split(" ");//splitting string with space
          int sum=0;
          int numbers[]=new int[numberString.length];
 

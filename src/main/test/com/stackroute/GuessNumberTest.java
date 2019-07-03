@@ -12,13 +12,12 @@ public class GuessNumberTest {
     public void setUp()
     {
         guessNumber=new GuessNumber();
-        System.out.println("Before");
+
     }
    @After
     public void tearDown()
    {
        guessNumber=null;
-       System.out.println("After");
    }
    @Test
     public void givenANumberShoudReturnCorrectGuess()

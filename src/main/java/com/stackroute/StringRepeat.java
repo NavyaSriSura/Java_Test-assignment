@@ -7,6 +7,8 @@ public class StringRepeat
         String var="";
         int length,repeat;
         length = string.length();
+        if(length<number)
+            return var="Enter Valid number";
         repeat = length - number;
         for(int j=0;j<length;j++)
         var+=string.charAt(j);

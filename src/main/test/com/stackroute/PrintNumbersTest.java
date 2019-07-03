@@ -13,19 +13,31 @@ public class PrintNumbersTest
     public void setUp()
     {
         printNumbers=new PrintNumbers();
-        System.out.println("Before");
+
     }
     @After
     public void Terminate()
     {
         printNumbers=null;
-        System.out.println("After");
     }
- @Test
+    @Test
     public void givenANumberShouldReturnSeriesOfthatNumber()
     {
 
         String result=printNumbers.printMethod(5);
         assertEquals("122333444455555",result);
     }
+    @Test
+    public void givenANegativeNumberShouldReturnError()
+    {
+        String result=printNumbers.printMethod(-1);
+        assertEquals("Only Positive Integers are allowed",result);
+    }
+    @Test
+    public void givenZeroReturnEmptyString()
+    {
+        String result=printNumbers.printMethod(0);
+        assertEquals("",result);
+    }
+
 }

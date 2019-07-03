@@ -13,29 +13,39 @@ public class SumOfDigitsTest
     public void setUp()
     {
         sumOfDigits=new SumOfDigits();
-        System.out.println("Before");
     }
     @After
     public void tearDown()
     {
         sumOfDigits=null;
-        System.out.println("After");
     }
   @Test
-    public void givenTwoNumberShouldReturnSumOfDigits() {
+    public void givenTwoNumberReturnSumOfDigits() {
       int result = sumOfDigits.sumDigits("34 5");
       assertEquals(result, 39);
   }
 
     @Test
-    public void givenThreeNumberShouldReturnSumOfDigits() {
+    public void givenThreeNumberReturnSumOfDigits() {
         int result = sumOfDigits.sumDigits("12 5 9");
         assertEquals(result, 26);
     }
 
     @Test
-    public void givenANumberShouldReturnSumOfDigits() {
+    public void givenANumberReturnSumOfDigits() {
         int result = sumOfDigits.sumDigits("12");
         assertEquals(result, 12);
+    }
+
+    @Test
+    public void givenZeroesReturnZero()
+    {
+        int result=sumOfDigits.sumDigits("0 0");
+        assertEquals(result,0);
+    }
+    @Test(expected = NullPointerException.class)
+    public void givenNullReturnException()
+    {
+        int result=sumOfDigits.sumDigits(null);
     }
 }

@@ -11,13 +11,11 @@ public class SortInDescendingTest {
     @Before
     public void setUp()
     {
-        System.out.println("Before");
         sortInDescending=new SortInDescending();
     }
     @After
     public void tearDown()
     {
-        System.out.println("After");
         sortInDescending=null;
     }
     @Test
@@ -38,9 +36,10 @@ public class SortInDescendingTest {
         String result=sortInDescending.sort(65748);
         assertEquals("87654",result);
     }
+    @Test
     public void givenANumberInDescendingOrderShouldCheckIfSumOfEvenIsGreaterThan15()
     {
         boolean result=sortInDescending.addEven(9843);
-        assertEquals("false",result);
+        assertEquals(false,result);
     }
 }

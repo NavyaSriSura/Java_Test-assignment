@@ -13,33 +13,36 @@ public class VowelConsonantTest
     public void SetUp()
    {
     vowelConsonant=new VowelConsonant();
-       System.out.println("Before");
    }
 
    @After
     public void tearDown()
    {
        vowelConsonant=null;
-       System.out.println("After");
    }
 
    @Test
-    public void givenAStringShouldReturnVowelsAndConsonants()
+    public void givenAStringdReturnVowelsAndConsonants()
    {
        String result=vowelConsonant.vowelConsonantCheck("navya");
        assertEquals(result,"ConsonantVowelConsonantConsonantVowel");
    }
 
     @Test
-    public void givenAStringShouldReturnVowels()
+    public void givenAStringReturnVowels()
     {
         String result=vowelConsonant.vowelConsonantCheck("aei");
         assertEquals(result,"VowelVowelVowel");
     }
     @Test
-    public void givenAStringShouldReturnConsonants()
+    public void givenAStringReturnConsonants()
     {
         String result=vowelConsonant.vowelConsonantCheck("bcd");
         assertEquals(result,"ConsonantConsonantConsonant");
+    }
+    @Test(expected = NullPointerException.class)
+    public void givenNullRaiseException()
+    {
+        String result=vowelConsonant.vowelConsonantCheck(null);
     }
 }

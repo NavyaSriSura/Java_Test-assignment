@@ -28,7 +28,7 @@ public class SortInDescending
         while(temp>0)
         {
             remainder=temp%10;
-            if(remainder%2==0)
+            if(remainder%2==0)//adding even digits
             {
                 addEven+=remainder;
             }

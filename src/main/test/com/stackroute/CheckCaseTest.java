@@ -8,13 +8,11 @@ public class CheckCaseTest {
     public void setUp()
     {
         checkCase=new CheckCase();
-        System.out.println("Before");
     }
     @After
-    public void TearDown()
+    public void tearDown()
     {
         checkCase=null;
-        System.out.println("After");
     }
     @Test
 public  void givenACharacterShouldReturnUpperCaseOrNot()
@@ -46,8 +44,12 @@ assertEquals("UpperCase",Result);
 
         String Result=checkCase.checkCaseMeth('@');
         assertEquals("SpecialSymbol",Result);
-
     }
-
+   @Test
+    public void givenSpaceReturnSpecialCharacter()
+   {
+       String Result=checkCase.checkCaseMeth(' ');
+       assertEquals("SpecialSymbol",Result);
+   }
 
 }
